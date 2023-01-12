@@ -1,3 +1,7 @@
+/*Nome: Lucas Felipe da Silva Nunes
+Enunciado: Criar uma classe para representar uma lâmpada vendida em um supermercado.
+Além de marca, modelo e tipo, esta deve conter um atributo que indique um dos dois possíveis estados da lâmpada (acesa ou
+apagada).*/
 public class Lampada{
 	private String marca, modelo, tipo;
 	private boolean aceso;

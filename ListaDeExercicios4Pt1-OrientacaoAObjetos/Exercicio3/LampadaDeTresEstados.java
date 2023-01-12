@@ -1,3 +1,5 @@
+/*Nome: Lucas Felipe da Silva Nunes
+Enunciado: Escrever uma classe que implemente uma lâmpada de três estados: apagada, acesa ou meia-luz.*/
 public class LampadaDeTresEstados{
 	private byte estado;
 	public LampadaDeTresEstados(){
@@ -6,10 +8,10 @@ public class LampadaDeTresEstados{
 	public LampadaDeTresEstados(byte estado){
 		this.estado = estado;
 	}
-	public void setByte(byte estado){
+	public void setEstado(byte estado){
 		this.estado = estado;
 	}
-	public byte getByte(){
+	public byte getEstado(){
 		return estado;
 	}
 }
