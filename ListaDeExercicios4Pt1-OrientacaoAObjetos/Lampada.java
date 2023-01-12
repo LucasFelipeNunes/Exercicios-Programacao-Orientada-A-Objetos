@@ -7,16 +7,16 @@ public class Lampada{
 		tipo = "";
 		aceso = false;
 	}
-	public void setMarca(){
+	public void setMarca(String marca){
 		this.marca = marca;
 	}
-	public void setModelo(){
+	public void setModelo(String modelo){
 		this.modelo = modelo;
 	}
-	public void setTipo(){
+	public void setTipo(String tipo){
 		this.tipo = tipo;
 	}
-	public void setAceso(){
+	public void setAceso(boolean aceso){
 		this.aceso = aceso;
 	}
 	public String getMarca(){
