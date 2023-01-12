@@ -1,24 +1,34 @@
 public class Lampada{
 	private String marca, modelo, tipo;
-	private boolean estado;
+	private boolean aceso;
 	public Lampada(){
+		marca = "";
+		modelo = "";
+		tipo = "";
+		aceso = false;
 	}
-	public void setMarca{
-		marca = sMarca;
+	public void setMarca(){
+		this.marca = marca;
 	}
-	public void setModelo{
-		modelo = sModelo;
+	public void setModelo(){
+		this.modelo = modelo;
 	}
-	public void setTipo{
-		tipo = sTipo;
+	public void setTipo(){
+		this.tipo = tipo;
 	}
-	public String getMarca{
-		return marca;
+	public void setAceso(){
+		this.aceso = aceso;
 	}
-	public String getModelo{
-		return modelo;
+	public String getMarca(){
+		return this.marca;
 	}
-	public String getTipo{
-		return tipo;
+	public String getModelo(){
+		return this.modelo;
+	}
+	public String getTipo(){
+		return this.tipo;
+	}
+	public boolean isAceso(){
+		return this.aceso;
 	}
 }
