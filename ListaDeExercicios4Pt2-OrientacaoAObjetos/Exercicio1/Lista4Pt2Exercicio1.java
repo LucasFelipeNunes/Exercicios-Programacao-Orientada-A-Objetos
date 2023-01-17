@@ -14,6 +14,6 @@ public class Lista4Pt2Exercicio1{
 		pessoa.setAltura(1.79);
 		System.out.print("Nome: " + pessoa.getNome() + "\nIdade (antes do aniversario): " + pessoa.getIdade());
 		pessoa.fazAniversario(true);
-		System.out.print("\nIdade (depois do aniversario): " + pessoa.getIdade() + "Altura: " + pessoa.getAltura());
+		System.out.print("\nIdade (depois do aniversario): " + pessoa.getIdade() + "\nAltura: " + pessoa.getAltura());
 	}
 }
