@@ -7,7 +7,6 @@ Com a matriz criada, armazenar na primeira coluna de cada linha o respectivo ele
 mento do vetor criado inicialmente e os demais elementos da linha serão formados
 pela sequencia de Primos. Imprimir a matriz resultante*/
 import java.util.Scanner;
-import java.util.Arrays;
 public class Lista0Exercicio29{
 	public static void main (String args[]){
 		Scanner ler = new Scanner(System.in);

@@ -1,7 +1,6 @@
 /*Nome: Lucas Felipe da Silva Nunes
 Enunciado: 30) Item ao exercício anterior, mas utilizando a sequencia de Fibonacci.*/
 import java.util.Scanner;
-import java.util.Arrays;
 public class Lista0Exercicio30{
 	public static void main (String args[]){
 		Scanner ler = new Scanner(System.in);
