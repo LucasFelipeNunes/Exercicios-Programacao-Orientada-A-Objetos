@@ -1,7 +1,7 @@
 /*Nome: Lucas Felipe da Silva Nunes
 Enunciado: 21) Escreva um programa em Java para gerar uma matriz (N x M) e outra (N x P). Ge-
 rar uma terceira matriz (N x (M+P)), sendo que para cada linha concatenar suas res-
-pectivas colunas e apresentar as três matrizes*/
+pectivas colunas e apresentar as três matrizes.*/
 import java.util.Scanner;
 public class Lista0Exercicio21{
 	public static void main (String args[]){
