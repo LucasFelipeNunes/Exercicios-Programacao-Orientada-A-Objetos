@@ -8,8 +8,8 @@ public class Lista0Exercicio19{
         System.out.print("Digite a dimensão N da matriz: ");
         int N = ler.nextInt();
         int[][] S = new int[N][N];
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
+        for (int i = 0; i < S.length; i++) {
+            for (int j = 0; j < S[i].length; j++) {
                 S[i][j] = (int) (Math.random() * 10);
                 if (i == j || i == N - j - 1 || j == 0 || j == N - 1) {
                     System.out.print(S[i][j] + " ");
