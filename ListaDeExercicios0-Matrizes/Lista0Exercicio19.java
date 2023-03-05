@@ -11,9 +11,12 @@ public class Lista0Exercicio19{
         for (int i = 0; i < S.length; i++) {
             for (int j = 0; j < S[i].length; j++) {
                 S[i][j] = (int) (Math.random() * 10);
-                if (i == j || i == N - j - 1 || j == 0 || j == N - 1) {
+                if (i == j || i == S.length - j - 1 || j == 0 || j == S.length - 1) 
+                {
                     System.out.print(S[i][j] + " ");
-                } else {
+                } 
+                else 
+                {
                     System.out.print("  ");
                 }
             }
