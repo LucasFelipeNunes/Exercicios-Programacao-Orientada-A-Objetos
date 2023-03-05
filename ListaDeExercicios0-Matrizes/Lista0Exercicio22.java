@@ -49,7 +49,10 @@ public class Lista0Exercicio22{
 			System.out.println();
 			for (int j = 0; j < (matriz1[i].length + matriz2[i].length); j++)
 			{
-				
+				if(matriz1[i].length > matriz2[i].length)
+				{
+					
+				}
 				System.out.print("\t" + ((j < matriz1[i].length) ? matriz1[i][j] : matriz2[i][j - matriz1[i].length]));
 			}
 		}

@@ -17,7 +17,7 @@ public class Lista0Exercicio19{
                 } 
                 else 
                 {
-                    System.out.print("  ");
+                    System.out.print(" ");
                 }
             }
             System.out.println();

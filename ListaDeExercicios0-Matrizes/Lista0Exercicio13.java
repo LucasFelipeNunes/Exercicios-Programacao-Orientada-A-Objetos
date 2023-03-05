@@ -1,6 +1,5 @@
 /*Nome: Lucas Felipe da Silva Nunes
-Enunciado: 13) Escreva um programa em Java
-para gerar uma matriz quadrada K de dimensão N.
+Enunciado: 13) Escreva um programa em Java para gerar uma matriz quadrada K de dimensão N.
 Imprimir os elementos da abaixo da diagonal secundária (exclusa)*/
 import java.util.Scanner;
 public class Lista0Exercicio13{
@@ -26,6 +25,5 @@ public class Lista0Exercicio13{
 		{
 			System.out.print(" " + K[i][K.length - i]);			
 		}
-		
 	}
 }
