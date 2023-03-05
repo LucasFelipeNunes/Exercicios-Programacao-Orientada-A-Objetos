@@ -25,6 +25,5 @@ public class Lista0Exercicio02{
 				System.out.print(" " + B[i][j]);
 			}
 		}
-		
 	}
 }
