@@ -1,6 +1,5 @@
 /*Nome: Lucas Felipe da Silva Nunes
-7) Escreva um programa em Java para
-gerar uma matriz E de dimensão N x M, deter-
+Enunciado: 7) Escreva um programa em Java para gerar uma matriz E de dimensão N x M, deter-
 minar e imprimir o maior e o menor elemento deste conjunto, informando a posição
 dos mesmos.*/
 import java.util.Scanner;
