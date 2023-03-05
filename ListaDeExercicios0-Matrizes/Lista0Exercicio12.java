@@ -1,8 +1,8 @@
 /*Nome: Lucas Felipe da Silva Nunes
-Enunciado: 14) Escreva um programa em Java para gerar uma matriz quadrada L de di-
-mensão N. Imprimir os elementos da acima da diagonal secundária (inclusa).*/
+Enunciado: 12) Escreva um programa em Java para gerar uma matriz quadrada L de di-
+mensão N. Imprimir os elementos da acima da diagonal principal (exclusa).*/
 import java.util.Scanner;
-public class Lista0Exercicio14{
+public class Lista0Exercicio12{
 	public static void main (String args[]){
 		Scanner ler = new Scanner(System.in);
 		int N = 0;
@@ -28,10 +28,10 @@ public class Lista0Exercicio14{
 				System.out.print("\t" + L[i][j]);
 			}
 		}
-		System.out.print("\nOs elementos da diagonal acima da secundaria sao:");
+		System.out.print("\nOs elementos da diagonal acima da principal sao:");
 		for (int i = 0; i < L.length - 1; i++)
 		{
-			System.out.print(" " + L[L.length - i - 2][i]);	
+			System.out.print(" " + L[i][i + 1]);	
 		}
 	}
 }
