@@ -47,14 +47,40 @@ public class Lista0Exercicio22{
 		for (int i = 0; i < matriz2.length; i++)
 		{
 			System.out.println();
-			for (int j = 0; j < (matriz1[i].length + matriz2[i].length); j++)
+			
+			if(matriz1[i].length < matriz2[i].length)
 			{
-				if(matriz1[i].length > matriz2[i].length)
+
+				for (int j = 0; j < matriz1[i].length; j++)
 				{
-					
+				
+
+					System.out.print("\t" + matriz1[i][j]);
+					System.out.print("\t" + matriz2[i][j]);
+				
 				}
-				System.out.print("\t" + ((j < matriz1[i].length) ? matriz1[i][j] : matriz2[i][j - matriz1[i].length]));
+
+				for (int j = 0; j < (matriz2[i].length - matriz1[i].length); j++)
+				{
+					System.out.print("\t" + matriz2[i][j + matriz1[i].length]);
+				}
+				
+			} else {
+				for (int j = 0; j < matriz2[i].length; j++)
+				{
+				
+
+					System.out.print("\t" + matriz1[i][j]);
+					System.out.print("\t" + matriz2[i][j]);
+				
+				}
+
+				for (int j = 0; j < (matriz1[i].length - matriz2[i].length); j++)
+				{
+					System.out.print("\t" + matriz1[i][j + matriz2[i].length]);
+				}
 			}
+			
 		}
 	}
 }
