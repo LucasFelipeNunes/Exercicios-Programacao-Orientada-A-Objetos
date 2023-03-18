@@ -6,8 +6,11 @@ Os exercícios estão separados em seis listas de exercícios, conforme o tema a
 ## [Lista de Exercícios 0 - Matrizes](Lista0-Matrizes)
 Esta lista contém exercícios para a revisão de conceitos aprendidos na matéria de Linguagem de Programação, especialmente os que envolvem matrizes.
 ## [1ª Lista de Exercícios - Métodos (Parte 1)](Lista1-MetodosPt1)
+Esta lista contém exercícios simples de conceitos relacionados a métodos
 ## [2ª Lista de Exercícios - Métodos (Parte 2)](Lista2-MetodosPt2)
+Esta lista contém exercícios mais complexos relacionados a métodos.
 ## [3ª Lista de Exercícios - Métodos (Parte 3)](Lista3-MetodosPt3)
+Esta lista contém exercícios voltados para a área matemática relacionados a métodos.
 ## [4ª Lista de Exercícios (Parte 1) - Programação Orientada a Objetos](Lista4Pt1-ProgramacaoOrientadaAObjetos)
 ## [4ª Lista de Exercícios (Parte 2) - Programação Orientada a Objetos](Lista4Pt2-ProgramacaoOrientadaAObjetos)
 ## [5ª Lista de Exercícios - Polimorfismo](Lista5-Polimorfismo)
