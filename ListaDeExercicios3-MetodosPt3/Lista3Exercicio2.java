@@ -14,7 +14,7 @@ Entre com a temperatura: 0					Saída: 32	(F = (9 * 0 / 5) + 32)
 [C] Celsius, [F] Fahrenheit e [S] Sair: S
 
 [C] Celsius, [F] Fahrenheit e [S] Sair: S
-* 
+
 [C] Celsius, [F] Fahrenheit e [S] Sair: C
 Entre com a temperatura: 100				Saída: 212	(F = (9 * 100 / 5) + 32)
 [C] Celsius, [F] Fahrenheit e [S] Sair: F
