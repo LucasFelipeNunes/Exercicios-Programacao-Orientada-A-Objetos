@@ -21,7 +21,7 @@ Entre com outro valor: 21 				23, 7 | 7 [x]
 										23, 1 | 23 [x]
 										1, 1 | 1 = 1*/
 import java.util.Scanner;
-public class Lista3Exercicio07{
+public class Lista3Exercicio7{
 	public static void main (String args[]){
 		Scanner ler = new Scanner(System.in);
 		System.out.print("Entre com um valor: ");

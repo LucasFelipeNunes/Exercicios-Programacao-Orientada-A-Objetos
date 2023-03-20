@@ -21,7 +21,7 @@ Entre com outro valor: 21 				23, 7 | 7
 										23, 1 | 23
 										1, 1 | 3 * 7 * 23 = 483*/
 import java.util.Scanner;
-public class Lista3Exercicio09{
+public class Lista3Exercicio9{
 	public static void main (String args[]){
 		Scanner ler = new Scanner(System.in);
 		System.out.print("Entre com um valor: ");
