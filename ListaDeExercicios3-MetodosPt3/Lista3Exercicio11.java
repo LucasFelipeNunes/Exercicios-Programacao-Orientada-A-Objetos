@@ -16,8 +16,8 @@ public class Lista3Exercicio11{
 		System.out.print(numero > 0 ? ("O numero " + numero + (isPerfeito(numero) ? " " : " nao ") + "e perfeito") : "Erro! Valor invalido.");
 	}
 	static boolean isPerfeito(int numero){
-		int somaDivisores = 1;
-		for(int i = 2; i <= numero / 2; i++){
+		int somaDivisores = 0;
+		for(int i = 1; i <= numero / 2; i++){
 			if(numero % i == 0){
 				somaDivisores += i;
 			}
