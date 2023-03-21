@@ -1,3 +1,4 @@
+/*Nome: Lucas Felipe da Silva Nunes*/
 public class Lista2Exercicio8 {
     public static void main(String[] args) {
         int[] quantidadeVezes = new int[6];

@@ -1,3 +1,4 @@
+/*Nome: Lucas Felipe da Silva Nunes*/
 import java.util.Scanner;
 
 public class Lista1Exercicio4 {
