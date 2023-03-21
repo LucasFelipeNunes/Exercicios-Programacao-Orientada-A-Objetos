@@ -37,7 +37,7 @@ Entre com a quantidade de termos: 0
 
 Entre com a quantidade de termos: -7 	Erro! Valor inválido.*/
 import java.util.Scanner;
-public class Lista3Exercicio08{
+public class Lista3Exercicio8{
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
         System.out.print("Entre com a quantidade de termos: ");
