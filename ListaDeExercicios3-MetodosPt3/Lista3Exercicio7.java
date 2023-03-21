@@ -31,25 +31,6 @@ public class Lista3Exercicio7{
 		System.out.print("MDC: " + MDC(valor1, valor2));
 	}
 	static int MDC(int valor1, int valor2){
-		int MDC = 1;
-		for (int i = 2; valor1 > 1 || valor2 > 1; i++)
-		{
-			boolean isPrimo = true;
-			for (int j = 2; j < i; j++)
-			{
-				if(i % j == 0){
-					isPrimo = false;
-				}
-			}
-			if(isPrimo){
-				if(valor1 % i == 0) valor1 /= i;
-				if(valor2 % i == 0) valor2 /= i;
-				if(valor1 % i == 0 || valor2 % i == 0){
-					MDC *= i;
-					System.out.print(" " + i);
-				}
-			}
-		}
-		return MDC;
-	}
+		return (valor2 == 0) ? valor1 : MDC(valor2, valor1 % valor2);
+    }
 }
