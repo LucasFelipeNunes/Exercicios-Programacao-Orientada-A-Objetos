@@ -9,12 +9,12 @@ public class Lista0Exercicio09{
 		int N = 0;
 		do{
 			System.out.print("Digite a dimensao inteira e positiva N da matriz quadrada G:\t");
-			N = ler.nextDouble(); 
+			N = ler.nextInt(); 
 			if(N <= 0){
 				System.out.print("Valor invalido. ");
 			}
 		}while(N <= 0);
-		double[][] G = new double[(int)N][(int)N];
+		double[][] G = new double[N][N];
 		System.out.print("Elementos da diagonal principal:");
 		for (int i = 0; i < G.length; i++)
 		{
