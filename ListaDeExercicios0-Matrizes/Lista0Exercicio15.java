@@ -6,15 +6,15 @@ import java.util.Scanner;
 public class Lista0Exercicio15{
 	public static void main (String args[]){
 		Scanner ler = new Scanner(System.in);
-		int N = 0;
+		int dimensaoN = 0;
 		do{
 			System.out.print("Digite a dimensao N da matriz O:\t");
-			N = ler.nextInt();
-			if(N <= 0){
+			dimensaoN = ler.nextInt();
+			if(dimensaoN <= 0){
 				System.out.print("Valor invalido. ");
 			}
-		}while(N <= 0);
-		int[][] O = new int[N][N];
+		}while(dimensaoN <= 0);
+		int[][] O = new int[dimensaoN][dimensaoN];
 		for (int i = 0; i < O.length; i++){
 			for (int j = 0; j < O.length; j++){
 				O[i][j] = (int) (Math.random() * 10);
