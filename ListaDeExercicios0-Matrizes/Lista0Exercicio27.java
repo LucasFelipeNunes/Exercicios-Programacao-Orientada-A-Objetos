@@ -1,5 +1,5 @@
 /*Nome: Lucas Felipe da Silva Nunes
-Enunciado: 25) Escreva um programa em Java para gerar uma matriz Y (N x M). Ordene os ele-
+Enunciado: 27) Escreva um programa em Java para gerar uma matriz Y (N x M). Ordene os ele-
 mentos da matriz de forma crescente e imprimir a matriz original e a matriz ordenada.*/
 
 import java.util.Scanner;
