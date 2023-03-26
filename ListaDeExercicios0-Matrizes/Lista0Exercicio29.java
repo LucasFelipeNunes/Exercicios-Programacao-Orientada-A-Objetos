@@ -6,16 +6,20 @@ de elementos do vetor e as colunas serão os valores dos elementos do vetor mais
 Com a matriz criada, armazenar na primeira coluna de cada linha o respectivo ele-
 mento do vetor criado inicialmente e os demais elementos da linha serão formados
 pela sequencia de Primos. Imprimir a matriz resultante*/
+
 import java.util.Scanner;
+
 public class Lista0Exercicio29{
 	public static void main (String args[]){
 		Scanner ler = new Scanner(System.in);
-		int valor = 0, aux = 2;
-		boolean ePrimo = false;
+		int auxiliar = 0, valor = 0;
+		boolean isPrimo = false;
 		do{
 			System.out.print("Digite um valor positivo inteiro:\t");
 			valor = ler.nextInt();
-			if(valor <= 0) System.out.print("Valor invalido. ");
+			if(valor <= 0){
+				System.out.print("Valor invalido. ");
+			}
 		}while(valor <= 0);
 		System.out.print("Vetor gerado:");
 		int[] vetor = new int[valor];
@@ -28,25 +32,23 @@ public class Lista0Exercicio29{
 			matriz[i][0] = vetor[i];
 		}
 		System.out.print("\nMatriz gerada");
-		for (int i = 0; i < matriz.length; i++)
-		{
+		for(int i = 0; i < matriz.length; i++){
+			auxiliar = 2;
 			System.out.print("\n" + matriz[i][0]);
-			for(int j = 1; j < matriz[i].length; j++)
-			{
-				ePrimo = false;
-				for(int k = aux;ePrimo == false;k++){
-					ePrimo = true;
+			for(int j = 1; j < matriz[i].length; j++){
+				isPrimo = false;
+				for(int k = auxiliar;isPrimo == false;k++){
+					isPrimo = true;
 					for(int l = 2;l < k;l++){
-						if(k%l == 0) ePrimo = false;
+						if(k % l == 0) isPrimo = false;
 					}
-					if(ePrimo){
+					if(isPrimo){
 						matriz[i][j] = k;
-						aux = k + 1;
+						auxiliar = k + 1;
 					}
 				}
 				System.out.print("\t" + matriz[i][j]);
 			}
-			aux = 2;
 		}
 		
 	}
