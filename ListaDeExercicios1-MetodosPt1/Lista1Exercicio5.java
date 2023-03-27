@@ -1,36 +1,45 @@
-/*Nome: Lucas Felipe da Silva Nunes*/
+/*Nome: Lucas Felipe da Silva Nunes
+Enunciado: 5) [POO-005] Baseado no exercício anterior, crie uma nova versão, que calcula as raízes de uma equação do
+segundo grau: ax² + bx + c = 0
+.
+Para ela existir, o coeficiente
+'a'
+deve ser diferente de zero.
+Caso o delta seja
+maior ou igual a zero, as raízes serão reais. Caso o delta seja neg
+ativo, as reais serão complexas
+e da forma
+,
+assim retorne zero.*/
 import java.util.Scanner;
 
 public class Lista1Exercicio5 {
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
+        Scanner ler = new Scanner(System.in);
 
         double a = 0;
 
         do {
-
-            System.out.println("Digite o A (diferente de zero): ");
-
+            System.out.print("a: ");
             a = scan.nextDouble();
-
+            if(a == 0) {
+                System.out.print("Valor invalido");
+            }
         } while (a == 0); 
         
-        System.out.println("Digite o B: ");
+        System.out.print("b: ");
+        double b = ler.nextDouble();
 
-        double b = scan.nextDouble();
-
-        System.out.println("Digite o C: ");
-
-        double c = scan.nextDouble();
+        System.out.println("c: ");
+        double c = ler.nextDouble();
 
         double delta = calcularDelta(a, b, c);
-
-        System.out.println("O delta e: " + delta + ( delta < 0 ? delta + ", De raiz imaginaria" : delta + ", De raiz real" ) );
+        System.out.println("O delta e: " + delta + ( (delta < 0) ? ", de raiz imaginaria" : ", de raiz real" ) );
 
         double[] raizes = calcularBhaskara(a, b, c);
 
-        System.out.println("As raizes sao: " + raizes[0] + ", " + raizes[1]);
+        System.out.print("As raizes sao: " + raizes[0] + ", " + raizes[1]);
 
     }
 
