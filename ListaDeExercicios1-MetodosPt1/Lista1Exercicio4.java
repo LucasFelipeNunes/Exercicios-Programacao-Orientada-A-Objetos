@@ -3,25 +3,25 @@ import java.util.Scanner;
 
 public class Lista1Exercicio4 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner ler = new Scanner(System.in);
+        
+        System.out.print("a: ");
 
-        System.out.println("Digite o A: ");
+        double a = ler.nextDouble();
 
-        double a = scan.nextDouble();
+        System.out.print("b: ");
 
-        System.out.println("Digite o B: ");
+        double b = ler.nextDouble();
 
-        double b = scan.nextDouble();
+        System.out.print("c: ");
 
-        System.out.println("Digite o C: ");
+        double c = ler.nextDouble();
 
-        double c = scan.nextDouble();
-
-        System.out.println("O delta e: " + calcularDelta(a, b, c));
+        System.out.print("Delta e: " + calcularDelta(a, b, c));
 
     }
 
     static double calcularDelta(double a, double b, double c) {
-        return Math.pow(b, 2) - 4*a*c;
+        return Math.pow(b, 2) - 4 * a * c;
     }
 }
