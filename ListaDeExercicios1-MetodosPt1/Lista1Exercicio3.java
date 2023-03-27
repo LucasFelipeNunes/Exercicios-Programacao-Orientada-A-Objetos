@@ -1,29 +1,33 @@
-/*Nome: Lucas Felipe da Silva Nunes*/
+/*Nome: Lucas Felipe da Silva Nunes
+Enunciado: Com base nos dois exercícios anteriores, crie programa que solicite ao usuário um número
+tipo double. Após verifique se o númeroé positivo, negativo ou zero. As verificações devem ser feitas 
+através de métodos.*/
+
 import java.util.Scanner;
 
-public class Lista1Exercicio3 {
+public class Lista1Exercicio3{
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner ler = new Scanner(System.in);
 
-        System.out.println("Digite um numero: ");
+        System.out.print("Entre com um numero: ");
 
-        double numero = scan.nextDouble();
-
+        double numero = ler.nextDouble();
+        
+        System.out.print("O numero " + %f " e ");
+                         
         if(isPositivo(numero)) {
-
-            System.out.println(isZero(numero) ? "Zero!" : numero + " e positivo");
-
+            System.out.println(isZero(numero) ? "zero." : "positivo.");
         } else {
-            System.out.println("Numero: " + numero + " e negativo");
+            System.out.println("negativo");
         }
     }
 
-    static boolean isPositivo(double num){
-        return num >= 0;
+    static boolean isPositivo(double numero) {
+        return (numero >= 0);
     }
     
     static boolean isZero(double numero) {
-        return numero == 0;
+        return (numero == 0);
     }
 }
 
