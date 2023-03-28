@@ -1,11 +1,11 @@
 /*Nome: Lucas Felipe da Silva Nunes
 Enunciado: 5) [POO-005] Baseado no exercício anterior, crie uma nova versão, que calcula as raízes de uma equação do
-segundo grau: ax² + bx + c = 0
-.
-Para ela existir, o coeficiente
-'a'
-deve ser diferente de zero.
-Caso o delta seja
+segundo grau: ax² + bx + c = 0. Para ela existir, o coeficiente 'a' deve ser diferente de zero. Caso o delta seja
+
+
+
+
+
 maior ou igual a zero, as raízes serão reais. Caso o delta seja neg
 ativo, as reais serão complexas
 e da forma
