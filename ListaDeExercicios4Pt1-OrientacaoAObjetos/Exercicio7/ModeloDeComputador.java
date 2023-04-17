@@ -10,11 +10,13 @@ a soma do custo de seus componentes:
 • Opções de disco rígido: 500 GB a R$300, 1 TB a R$420, 2TB a R$500.
 • Opções de monitor: 15 polegadas a R$320, 17 polegadas a R$520.*/
 public class ModeloDeComputador{
+	
 	private double placaMae;
 	private double processador;
 	private double memoria;
 	private double discoRigido;
 	private double monitor;
+	
 	public ModeloDeComputador{
 		placaMae = 800;
 		processador = 0;
@@ -22,10 +24,25 @@ public class ModeloDeComputador{
 		discoRigido = 0;
 		monitor = 0;
 	}
+	
 	public double CalcularPreco(int frequenciaProcessador, int armazenamentoMemoria, int armazenamentoDiscoRigido, int tamanhoMonitor){
-		double preco = placaMae + armazenamentoMemoria * memoria;
-		if(frequenciaProcessador == 1600){
-			
+		if(armazenamentoMemoria == 1 || armazenamentoMemoria == 2 || armazenamentoMemoria == 4 || armazenamentoMemoria == 6 || armazenamentoMemoria == 8){
+			double preco = placaMae + armazenamentoMemoria * memoria;
+		} else{
+			return -1;
 		}
+		
+		if(frequenciaProcessador == 1600){
+			processador = 700;
+		} else if(frequenciaProcessador == 1800){
+			processador = 830;
+		} else if(frequenciaProcessador == 1900){
+			processador = 910;
+		} else{
+			return -1;
+		}
+		
+		if
 	}
+	
 }
