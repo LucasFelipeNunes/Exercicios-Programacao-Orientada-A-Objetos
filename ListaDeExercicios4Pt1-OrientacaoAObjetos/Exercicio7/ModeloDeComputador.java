@@ -25,24 +25,11 @@ public class ModeloDeComputador{
 		monitor = 0;
 	}
 	
-	public double CalcularPreco(int frequenciaProcessador, int armazenamentoMemoria, int armazenamentoDiscoRigido, int tamanhoMonitor){
-		if(armazenamentoMemoria == 1 || armazenamentoMemoria == 2 || armazenamentoMemoria == 4 || armazenamentoMemoria == 6 || armazenamentoMemoria == 8){
-			double preco = placaMae + armazenamentoMemoria * memoria;
-		} else{
-			return -1;
-		}
-		
-		if(frequenciaProcessador == 1600){
-			processador = 700;
-		} else if(frequenciaProcessador == 1800){
-			processador = 830;
-		} else if(frequenciaProcessador == 1900){
-			processador = 910;
-		} else{
-			return -1;
-		}
-		
-		if
+	public double calcularPreco(int frequenciaProcessador, int armazenamentoMemoria, int armazenamentoDiscoRigido, int tamanhoMonitor){
+		processador = (frequenciaProcessador == 1600) ? 700 : (frequenciaProcessador == 1800) ? 830 : 910;
+		discoRigido = (armazenamentoDiscoRigido == 500) ? 300 : (armazenamentoDiscoRigido == 1000) ? 420 : 500;
+		tamanhoMonitor = (tamanhoMonitor == 15) ? 320 : 520;
+		double preco = placaMae + armazenamentoMemoria * memoria + processador + discoRigido + tamanhoMonitor;
 	}
 	
 }
