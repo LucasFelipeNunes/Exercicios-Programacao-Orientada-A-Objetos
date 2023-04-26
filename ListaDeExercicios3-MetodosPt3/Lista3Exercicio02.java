@@ -21,29 +21,49 @@ Entre com a temperatura: 100				Saída: 212	(F = (9 * 100 / 5) + 32)
 Entre com a temperatura: 86					Saída: 30	(C = 5 * (86 - 32) / 9)
 [C] Celsius, [F] Fahrenheit e [S] Sair: S*/
 import java.util.Scanner;
-public class Lista3Exercicio2{
-	public static void main (String args[]){
-		Scanner ler = new Scanner(System.in), lerString = new Scanner(System.in);
-		String opcao = new String();
-		do{
-			do{
-				System.out.print("[C] Celsius, [F] Fahrenheit e [S] Sair: ");
-				opcao = lerString.nextLine();
-				if(!opcao.equals("C") && !opcao.equals("F") && !opcao.equals("S") || opcao.length() > 1){
-					System.out.println("\tOpcao Invalida!");
-				}
-			}while(!opcao.equals("C") && !opcao.equals("F") && !opcao.equals("S") || opcao.length() > 1);
-			if(!opcao.equals("S")){
-				System.out.print("Entre com a temperatura: ");
+
+public class Lista3Exercicio02{
+
+    public static void main (String args[]){
+
+        Scanner ler = new Scanner(System.in), lerString = new Scanner(System.in);
+
+        String opcao = new String();
+
+        do{
+
+            do{
+
+                System.out.print("[C] Celsius, [F] Fahrenheit e [S] Sair: ");
+                opcao = lerString.nextLine();
+
+                if(!opcao.equals("C") && !opcao.equals("F") && !opcao.equals("S") || opcao.length() > 1){
+                    System.out.println("\tOpcao Invalida!");
+                }
+
+            }while(!opcao.equals("C") && !opcao.equals("F") && !opcao.equals("S") || opcao.length() > 1);
+
+            if(!opcao.equals("S")){
+                
+                System.out.print("Entre com a temperatura: ");
 				double temperatura = ler.nextDouble();
-				System.out.println("Saida: " + (opcao.equals("C") ? retornaTempFarenheit(temperatura) : retornaTempCelsius(temperatura)));
-			}
+
+                System.out.print("Saida: " + (opcao.equals("C") ? retornaTemperaturaFarenheit(temperatura) : retornaTemperaturaCelsius(temperatura)));
+
+            }
 		}while(!opcao.equals("S"));
 	}
-	static double retornaTempCelsius(double tempFarenheit){
-		return 5 * (tempFarenheit - 32) / 9;
-	}
-	static double retornaTempFarenheit(double tempCelsius){
-		return 9 * tempCelsius / 5 + 32;
-	}
+
+    static double retornaTemperaturaCelsius(double temperaturaFarenheit){
+
+        return 5 * (temperaturaFarenheit - 32) / 9;
+
+    }
+
+    static double retornaTemperaturaFarenheit(double temperaturaCelsius){
+
+        return 9 * temperaturaCelsius / 5 + 32;
+
+    }
+
 }

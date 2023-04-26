@@ -1,4 +1,19 @@
-/*Nome: Lucas Felipe da Silva Nunes*/
+/*Nome: Lucas Felipe da Silva Nunes
+Enunciado: 2) [POO-007] Crie um programa que solicite ao usuário dois números inteiros. Através de um método, que
+receba esses 2 números como parâmetros de entrada, verifique e retorne o menor dos dois valores.
+
+Restrição: NÃO usar o pacote Math.
+
+Entrada: 								Saída:
+	Entre com um número inteiro: 8 			O menor é: 2
+	Entre com outro número inteiro: 2
+	
+	Entre com um número inteiro: -48 		O menor é: -48
+	Entre com outro número inteiro: 48
+	
+	Entre com um número inteiro: 17 		O menor é: 17
+	Entre com outro número inteiro: 17*/
+	
 import java.util.Scanner;
 
 public class Lista2Exercicio2 {
@@ -8,17 +23,19 @@ public class Lista2Exercicio2 {
 
 		System.out.print("Entre com um numero inteiro: ");
 
-		int n1 = ler.nextInt();
+		int numero1 = ler.nextInt();
 
 		System.out.print("Entre com outro numero inteiro: ");
 
-		int n2 = ler.nextInt();
+		int numero2 = ler.nextInt();
 
-		System.out.print("O menor e: " + menor(n1,n2));
-
+		System.out.print((numero1 == numero2) ? "Os dois numeros sao iguais" : "O menor e: " + menorValor(numero1,numero2));
+	
 	}
 
-	static int menor(int n1, int n2) {
-		return (n1 < n2 ? n1 : n2);
+	static int menorValor(int numero1, int numero2) {
+	
+		return ((numero1 < numero2) ? numero1 : numero2);
+	
 	}
 }

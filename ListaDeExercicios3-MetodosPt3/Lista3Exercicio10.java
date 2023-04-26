@@ -32,56 +32,85 @@ Entre com a quantidade de termos: 1 	Erro! Valor inválido.
 Entre com a quantidade de termos: 0
 
 Entre com a quantidade de termos: -7 	Erro! Valor inválido.*/
+
 import java.util.Scanner;
+
 public class Lista3Exercicio10{
-	public static void main (String args[]){
-		Scanner ler = new Scanner(System.in);
-		int qtdTermos = 0;
-		System.out.print("Entre com a quantidade de termos: ");
-		qtdTermos = ler.nextInt();
+
+    public static void main (String args[]){
+
+        Scanner ler = new Scanner(System.in);
+
+        System.out.print("Entre com a quantidade de termos: ");
+		int qtdTermos = ler.nextInt();
+
 		if(validaQuantidade(qtdTermos)){
-			int[] numeros = new int[qtdTermos];
-			for (int i = 0; i < numeros.length; i++)
-			{
-				do{
-					System.out.print("Entre com " + (i + 1) + "º numero: ");
+
+            int[] numeros = new int[qtdTermos];
+
+            for (int i = 0; i < numeros.length; i++){
+				
+                do{
+				
+                    System.out.print("Entre com " + (i + 1) + "º numero: ");
 					numeros[i] = ler.nextInt();
-					if(numeros[i] <= 0){
-						System.out.print("Valor invalido. ");
-					}
-				}while(numeros[i] <= 0);
+				
+                    if(numeros[i] <= 0){
+                        System.out.print("Valor invalido. ");
+                    }
+				
+                }while(numeros[i] <= 0);
+
 			}
-			System.out.print("MMC: " + MMC(numeros));
-		}
+			
+            System.out.print("MMC: " + MMC(numeros));
+		
+        }
+	
+    }
+	
+    static boolean validaQuantidade(int qtdTermos){
+        return !(qtdTermos <= 1);
 	}
-	static boolean validaQuantidade(int qtd){
-		if(qtd <= 1){
-			System.out.print("Erro! Valor invalido. ");
-			return false;
-		}
-		return true;
-	}
+
 	static int MMC(int[] numeros){
-		int MMC = 1, divisor = 2, contador = 0;
+	
+        int MMC = 1, divisor = 2, contador = 0;
+    
         while (contador != numeros.length) {
+    
             contador = 0;
-            boolean divisivel = false;
+    
+            boolean isDivisivel = false;
+    
             for (int i = 0; i < numeros.length; i++) {
+    
                 if (numeros[i] == 1) {
                     contador++;
                 }
+    
                 else if (numeros[i] % divisor == 0) {
-                    divisivel = true;
+    
+                    isDivisivel = true;
+    
                     numeros[i] /= divisor;
+    
                 }
+    
             }
-            if (divisivel) {
+    
+            if (isDivisivel) {
                 MMC *= divisor;
             }
+    
             else {
                 divisor++;
             }
+    
         }
+    
         return MMC;
-	}
+	
+    }
+
 }

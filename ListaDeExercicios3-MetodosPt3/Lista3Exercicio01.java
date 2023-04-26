@@ -10,14 +10,24 @@ Entre com temperatura em Celsius: 0		A temperatura em Fahrenheit é: 32
 Entre com temperatura em Celsius: 100	A temperatura em Fahrenheit é: 212
 Entre com temperatura em Celsius: 30	A temperatura em Fahrenheit é: 86*/
 import java.util.Scanner;
-public class Lista3Exercicio1{
-	public static void main (String args[]){
-		Scanner ler = new Scanner(System.in);
-		System.out.print("Entre com a temperatura em Celsius: ");
-		double temperaturaCelsius = ler.nextDouble();
-		System.out.print("A temperatura em Farenheit e " + conversaoFarenheit(temperaturaCelsius));
-	}
-	static double conversaoFarenheit(double temperaturaCelsius){
-		return 9 * temperaturaCelsius / 5 + 32;
-	}
+
+public class Lista3Exercicio01{
+
+    public static void main (String args[]){
+
+        Scanner ler = new Scanner(System.in);
+
+        System.out.print("Entre com a temperatura em Celsius: ");
+        double temperaturaCelsius = ler.nextDouble();
+
+        System.out.print("A temperatura em Farenheit e " + conversaoFarenheit(temperaturaCelsius));
+
+    }
+
+    static double conversaoFarenheit(double temperaturaCelsius){
+
+        return 9 * temperaturaCelsius / 5 + 32;
+
+    }
+
 }

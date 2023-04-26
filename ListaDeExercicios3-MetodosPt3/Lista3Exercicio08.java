@@ -37,39 +37,62 @@ Entre com a quantidade de termos: 0
 
 Entre com a quantidade de termos: -7 	Erro! Valor inválido.*/
 import java.util.Scanner;
-public class Lista3Exercicio8{
+
+public class Lista3Exercicio08{
+
     public static void main(String[] args) {
+
         Scanner ler = new Scanner(System.in);
+
         System.out.print("Entre com a quantidade de termos: ");
         int qtdTermos = ler.nextInt();
+
         if(qtdTermos < 0){
 			System.out.print("Erro! Valor invalido.");
 		}
-		else if(qtdTermos > 0){
-			int[] numeros = new int[qtdTermos];
-			for(int i = 0; i < qtdTermos; i++) {
-				do{
-					System.out.print("Entre com " + (i + 1) + " numero: ");
+
+        else if(qtdTermos > 0){
+
+            int[] numeros = new int[qtdTermos];
+
+            for(int i = 0; i < qtdTermos; i++) {
+
+                do{
+
+                    System.out.print("Entre com " + (i + 1) + " numero: ");
 					numeros[i] = ler.nextInt();
-					if (numeros[i] <= 0) {
+
+                    if (numeros[i] <= 0) {
 						System.out.print("Valor invalido. ");
 					}
-				}while(numeros[i] <= 0);
-			}
-			int mdc = MDC(numeros);
-			System.out.println("O MDC dos números digitados é " + mdc);
+
+                }while(numeros[i] <= 0);
+
+            }
+
+			System.out.print("O MDC dos números digitados é " + MDC(numeros));
 		}
     }
     public static int MDC(int[] numeros) {
-        int mdc = numeros[0];
+  
+        int mdc = numeros[0], resto;
+  
         for(int i = 1; i < numeros.length; i++) {
-            int resto;
-			while (numeros[i] != 0) {
-				resto = mdc % numeros[i];
-				mdc = numeros[i];
-				numeros[i] = resto;
-			}
+
+            while (numeros[i] != 0) {
+
+                resto = mdc % numeros[i];
+
+                mdc = numeros[i];
+
+                numeros[i] = resto;
+
+            }
+
         }
+
         return mdc;
+
     }
+
 }

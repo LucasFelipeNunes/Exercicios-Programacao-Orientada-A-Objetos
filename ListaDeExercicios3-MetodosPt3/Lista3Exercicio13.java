@@ -18,48 +18,82 @@ Entre com 3º número: 7
 Entre com a quantidade de termos: -5 	Erro! Valor inválido.
 
 Entre com a quantidade de termos: 0 	Erro! Valor inválido*/
+
 import java.util.Scanner;
+
 public class Lista3Exercicio13{
-	public static void main (String args[]){
-		Scanner ler = new Scanner(System.in);
-		System.out.print("Entre com a quantidade de termos: ");
+
+    public static void main (String args[]){
+
+        Scanner ler = new Scanner(System.in);
+
+        System.out.print("Entre com a quantidade de termos: ");
 		int qtdTermos = ler.nextInt();
-		if(qtdTermos <= 0){
+
+        if(qtdTermos <= 0){
 			System.out.print("Erro! Valor invalido.");
 		}
-		else{
-			int[] numeros = new int[qtdTermos];
-			for (int i = 0; i < numeros.length; i++)
-			{
-				System.out.print("Entre com " + (i + 1) + "º numero: ");
-				numeros[i] = ler.nextInt();
-			}
-			int[] numerosPerfeitos = verificaNumerosPerfeitos(numeros);
-			System.out.print("Numeros perfeitos encontrados: ");
-			for (int i = 0; i < numerosPerfeitos.length; i++) {
-				System.out.print(numerosPerfeitos[i] + " ");
-			}
-		}
-	}
-	public static int[] verificaNumerosPerfeitos(int[] numeros) {
-        int[] numerosPerfeitos = new int[numeros.length];
-        int contadorPerfeitos = 0;
-        for (int i = 0; i < numeros.length; i++) {
-			int somaDivisores = 0;
-			for(int j = 1;j <= numeros[i] / 2; j++){
-				if(numeros[i] % j == 0){
-					somaDivisores += j;
-				}
-			}
-            if (somaDivisores == numeros[i]) {
-                numerosPerfeitos[contadorPerfeitos] = numeros[i];
-                contadorPerfeitos++;
+
+        else{
+            int[] numeros = new int[qtdTermos];
+
+            for (int i = 0; i < numeros.length; i++){
+
+                System.out.print("Entre com " + (i + 1) + "º numero: ");
+                numeros[i] = ler.nextInt();
+
             }
+
+            int[] numerosPerfeitos = verificaNumerosPerfeitos(numeros);
+
+            System.out.print("Numeros perfeitos encontrados: ");
+
+            for (int i = 0; i < numerosPerfeitos.length; i++) {
+
+                System.out.print(numerosPerfeitos[i] + " ");
+
+            }
+
         }
-        int[] resultado = new int[contadorPerfeitos];
+
+    }
+
+    public static int[] verificaNumerosPerfeitos(int[] numeros) {
+
+        int[] numerosPerfeitos = new int[numeros.length];
+
+        int qtdPerfeitos = 0, somaDivisores = 0;
+
+        for (int i = 0; i < numeros.length; i++) {
+
+            somaDivisores = 0;
+
+            for(int j = 1;j <= numeros[i] / 2; j++){
+
+                if(numeros[i] % j == 0){
+                    somaDivisores += j;
+				}
+
+            }
+
+            if (somaDivisores == numeros[i]) {
+                numerosPerfeitos[qtdPerfeitos] = numeros[i];
+
+                qtdPerfeitos++;
+            }
+
+        }
+
+        int[] resultado = new int[qtdPerfeitos];
+
         for (int i = 0; i < resultado.length; i++) {
+
             resultado[i] = numerosPerfeitos[i];
+
         }
+
         return resultado;
+
     }    
+
 }

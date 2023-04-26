@@ -8,20 +8,34 @@ Entre com um número: 11 	O número 11 não é perfeito
 Entre com um número: -4 	Erro! Valor inválido.
 Entre com um número: 0 		Erro! Valor inválido.*/
 import java.util.Scanner;
+
 public class Lista3Exercicio11{
-	public static void main (String args[]){
-		Scanner ler = new Scanner(System.in);
-		System.out.print("Entre com um numero: ");
+
+    public static void main (String args[]){
+
+        Scanner ler = new Scanner(System.in);
+
+        System.out.print("Entre com um numero: ");
 		int numero = ler.nextInt();
-		System.out.print(numero > 0 ? ("O numero " + numero + (isPerfeito(numero) ? " " : " nao ") + "e perfeito") : "Erro! Valor invalido.");
-	}
-	static boolean isPerfeito(int numero){
-		int somaDivisores = 0;
-		for(int i = 1; i <= numero / 2; i++){
-			if(numero % i == 0){
+
+        System.out.print(numero > 0 ? ("O numero " + numero + (isPerfeito(numero) ? " " : " nao ") + "e perfeito") : "Erro! Valor invalido.");
+
+    }
+
+    static boolean isPerfeito(int numero){
+
+        int somaDivisores = 0;
+
+        for(int i = 1; i <= numero / 2; i++){
+
+            if(numero % i == 0){
 				somaDivisores += i;
 			}
-		}
-		return somaDivisores == numero;
-	}
+
+        }
+
+        return somaDivisores == numero;
+
+    }
+
 }

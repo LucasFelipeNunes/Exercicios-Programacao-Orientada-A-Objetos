@@ -21,16 +21,25 @@ Entre com outro valor: 21 				23, 7 | 7 [x]
 										23, 1 | 23 [x]
 										1, 1 | 1 = 1*/
 import java.util.Scanner;
-public class Lista3Exercicio7{
-	public static void main (String args[]){
-		Scanner ler = new Scanner(System.in);
-		System.out.print("Entre com um valor: ");
+public class Lista3Exercicio07{
+	
+    public static void main (String args[]){
+		
+        Scanner ler = new Scanner(System.in);
+	
+        System.out.print("Entre com um valor: ");
 		int valor1 = ler.nextInt();
-		System.out.print("Entre com outro valor: ");
+	
+        System.out.print("Entre com outro valor: ");
 		int valor2 = ler.nextInt();
-		System.out.print("MDC: " + MDC(valor1, valor2));
+	
+        System.out.print("MDC: " + MDC(valor1, valor2));
 	}
-	static int MDC(int valor1, int valor2){
-		return (valor2 == 0) ? valor1 : MDC(valor2, valor1 % valor2);
+	
+    static int MDC(int valor1, int valor2){
+	
+        return (valor2 == 0) ? valor1 : MDC(valor2, valor1 % valor2);
+    
     }
+
 }
