@@ -9,27 +9,50 @@ a soma do custo de seus componentes:
 • Opções de memória: 1GB, 2GB, 4GB, 6GB ou 8GB, cada 1GB custa R$350.
 • Opções de disco rígido: 500 GB a R$300, 1 TB a R$420, 2TB a R$500.
 • Opções de monitor: 15 polegadas a R$320, 17 polegadas a R$520.*/
-public class ModeloDeComputador{
+
+public class ModeloDeComputador {
+
+    private int placaMae;
+    private int processador;
+    private int memoria;
+    private int discoRigido;
+    private int monitor;
+    
+    public ModeloDeComputador(){
+        placaMae = 800;
+        memoria = 350;
+    }
 	
-	private double placaMae;
-	private double processador;
-	private double memoria;
-	private double discoRigido;
-	private double monitor;
+    public void setProcessador(int freqProcessador){
+        processador = (freqProcessador == 1600) ? 700 : (freqProcessador == 1800) ? 830 : 910;
+    }
+    public void setMemoria(int armazenamentoMemoria){
+        memoria *= armazenamentoMemoria;
+    }
+    public void setDiscoRigido(int armazenamentoDiscoRigido) {
+        discoRigido = (armazenamentoDiscoRigido == 500) ? 300 : (armazenamentoDiscoRigido == 1000) ? 420 : 500;
+    }
+    public void setMonitor(int tamanhoMonitor) {
+        monitor = (tamanhoMonitor == 15) ? 320 : 520;;
+    }
 	
-	public ModeloDeComputador{
-		placaMae = 800;
-		processador = 0;
-		memoria = 350;
-		discoRigido = 0;
-		monitor = 0;
-	}
+    public int getPlacaMae() {
+        return placaMae;
+    }
+    public int getProcessador() {
+        return processador;
+    }
+    public int getMemoria() {
+        return memoria;
+    }
+    public int getDiscoRigido() {
+        return discoRigido;
+    }
+    public int getMonitor() {
+        return monitor;
+    }
 	
-	public double calcularPreco(int frequenciaProcessador, int armazenamentoMemoria, int armazenamentoDiscoRigido, int tamanhoMonitor){
-		processador = (frequenciaProcessador == 1600) ? 700 : (frequenciaProcessador == 1800) ? 830 : 910;
-		discoRigido = (armazenamentoDiscoRigido == 500) ? 300 : (armazenamentoDiscoRigido == 1000) ? 420 : 500;
-		tamanhoMonitor = (tamanhoMonitor == 15) ? 320 : 520;
-		double preco = placaMae + armazenamentoMemoria * memoria + processador + discoRigido + tamanhoMonitor;
-	}
-	
+    public double calcularPreco(){
+        return placaMae + processador + memoria + discoRigido + monitor;
+    }
 }
