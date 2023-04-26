@@ -12,8 +12,25 @@ a soma do custo de seus componentes:
 
 public class Lista4Pt1Exercicio7{
   public static void main(String[] args{
+    int frequenciaProcessador = 0, armazenamentoMemoria = 0, armazenamentoDiscoRigido = 0, tamanhoMonitor = 0;
     ModeloDeComputador modelo = new ModeloDeComputador();
-    System.out.print("Monte um computador e veja o preco\n\nFrequencias de processador disponiveis:\n- 1600Mhz a R$700\n- 1800Mhz a R$830\n- 1900Mhz a R$910\nQual opcao voce escolhe: ");
-  
+    System.out.print("Monte um computador e veja o preco\n\nPlaca-mae: R$800,00\nFrequencias de processador disponiveis:\n- 1600Mhz: R$700,00\n- 1800Mhz: R$830,00\n- 1900Mhz: R$910,00\n");
+    do{
+      System.out.print("Digite o valor da frequencia que voce deseja: ");
+      int frequenciaProcessador = ler.nextInt();
+      if(frequenciaProcessador != 1600 && frequenciaProcessador != 1800 && frequenciaProcessador != 1900){
+        System.out.print("Valor invalido. ");
+      }
+    }while(frequenciaProcessador != 1600 && frequenciaProcessador != 1800 && frequenciaProcessador != 1900);
+    System.out.print("\nOpcoes de Memoria: 1GB, 2GB, 4GB, 6GB ou 8GB\nCada GB custa R$350,00\n\n");
+    
+    do{
+      System.out.print("Digite a quantidade de memoria: ");
+      int frequenciaProcessador = ler.nextInt();
+      if(frequenciaProcessador != 1600 && frequenciaProcessador != 1800 && frequenciaProcessador != 1900){
+        System.out.print("Valor invalido. ");
+      }
+    }while(frequenciaProcessador != 1600 && frequenciaProcessador != 1800 && frequenciaProcessador != 1900);
+    
   }
 }
