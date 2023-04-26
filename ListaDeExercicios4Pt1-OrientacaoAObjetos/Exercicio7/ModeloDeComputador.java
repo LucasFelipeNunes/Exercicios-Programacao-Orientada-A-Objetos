@@ -23,17 +23,20 @@ public class ModeloDeComputador {
         memoria = 350;
     }
 	
-    public void setProcessador(int freqProcessador){
-        processador = (freqProcessador == 1600) ? 700 : (freqProcessador == 1800) ? 830 : 910;
+    public void setPlacaMae(int placaMae){
+        this.placaMae = placaMae;
     }
-    public void setMemoria(int armazenamentoMemoria){
-        memoria *= armazenamentoMemoria;
+    public void setProcessador(int processador){
+        this.processador = processador;
     }
-    public void setDiscoRigido(int armazenamentoDiscoRigido) {
-        discoRigido = (armazenamentoDiscoRigido == 500) ? 300 : (armazenamentoDiscoRigido == 1000) ? 420 : 500;
+    public void setMemoria(int memoria){
+        this.memoria = memoria;
     }
-    public void setMonitor(int tamanhoMonitor) {
-        monitor = (tamanhoMonitor == 15) ? 320 : 520;;
+    public void setDiscoRigido(int discoRigido) {
+        this.discoRigido = discoRigido;
+    }
+    public void setMonitor(int monitor) {
+        this.monitor = monitor;
     }
 	
     public int getPlacaMae() {
