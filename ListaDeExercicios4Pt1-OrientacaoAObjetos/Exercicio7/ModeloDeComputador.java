@@ -55,7 +55,7 @@ public class ModeloDeComputador {
         return monitor;
     }
 	
-    public double calcularPreco(){
+    public int calcularPreco(){
         return placaMae + processador + memoria + discoRigido + monitor;
     }
 }
