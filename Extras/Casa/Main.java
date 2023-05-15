@@ -8,10 +8,10 @@ public class Main{
 		String cor;
 		
 		do{
-			System.out.print("Digite a quantidade de portas da casa (no minimo uma): ");
+			System.out.print("Digite a quantidade de portas da casa (entre 1 e 100): ");
 			qtdPortas = ler.nextInt();
 			
-			if(qtdPortas <= 0){
+			if(qtdPortas <= 0 || qtdPortas > 100){
 				System.out.print("Valor invalido. ");
 			}
 			
@@ -28,13 +28,18 @@ public class Main{
 		}while(!cor.equals("branca") && !cor.equals("azul") && !cor.equals("vermelha"));
 		
 		Casa casa = new Casa(qtdPortas, cor);
-		while(opcao != 4){
-			
-			System.out.print("\n1. Abrir porta\n2. Fechar porta\n3. Visualizar porta\n4. Encerrar o programa\n\nEscolha uma opcao: ");
-			opcao = ler.nextInt();
-			
-			if(opcao != 4){
+		
+		while(opcao != 6){
+			System.out.println("\n1. Abrir porta\n2. Fechar porta\n3. Visualizar porta\n4. Trocar cor\n5. Visalizar cor\n6. Encerrar o programa\n");
+			do{
+				System.out.print("Escolha uma opcao: ");
+				opcao = ler.nextInt();
 				
+				if(opcao < 1 || opcao > 6){
+					System.out.print("Opcao invalida.");
+				}
+			}while(opcao < 1 || opcao > 6);
+			if(opcao < 4){
 				do{
 					System.out.print("Escolha a porta: ");
 					numeroPorta = ler.nextInt();
@@ -65,6 +70,13 @@ public class Main{
 						System.out.println("A porta " + (casa.getPorta(numeroPorta - 1) ? "esta" : "nao esta") + " aberta.");
 						break;
 				}
+			} else if(opcao == 4){
+				System.out.print("Digite a cor que voce quer pintar: ");
+				cor = lerString.nextLine();
+				
+				System.out.print("A cor da casa " + (casa.trocarCor(cor) ? "foi trocada" : "nao foi trocada (por estar com a mesma cor ou porque a cor e invalida)");
+			} else if(opcao == 5){
+				System.out.print("A cor da casa e " + casa.getCor());
 			}
 		}
 	}
