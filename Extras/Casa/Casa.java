@@ -26,4 +26,12 @@ public class Casa{
 	public boolean getPorta(int numeroPorta){
 		return portas[numeroPorta];
 	}
+	
+	public boolean trocarCor(String cor){
+		if(!cor.equals(this.cor) || !cor.equals("branca") && !cor.equals("azul") && !cor.equals("vermelha")){
+			return false;
+		}
+		this.cor = cor;
+		return true;
+	}
 }
