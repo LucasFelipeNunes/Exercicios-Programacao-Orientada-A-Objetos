@@ -1,11 +1,13 @@
 public class Flor extends Planta {
-
     String cor;
 
+	public Flor(){
+		super();
+	}
+	
     public Flor(String nome, String especie, String cor) {
         super(nome, especie);
         this.cor = cor;
-
     }
 
     public String getCor () {

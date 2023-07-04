@@ -10,15 +10,19 @@ public class Produto{
 	protected double preco;
 	protected double quantidade;
 	private int qtdProdutos;
+	
 	public void setPreco(double preco){
 		this.preco = preco;
 	}
+	
 	public void setQuantidade(double quantidade){
 		this.quantidade = quantidade;
 	}
+	
 	public double getPreco(){
 		return preco;
 	}
+	
 	public double getQuantidade(){
 		return quantidade;
 	}

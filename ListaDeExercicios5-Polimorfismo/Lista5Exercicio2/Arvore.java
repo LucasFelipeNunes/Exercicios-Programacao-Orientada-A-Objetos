@@ -1,5 +1,9 @@
 public class Arvore extends Planta {
     boolean frutifera;
+    
+    public Arvore(){
+		super();
+	}
 
     public Arvore(String nome, String especie, boolean frutifera) {
         super(nome, especie);
@@ -7,12 +11,11 @@ public class Arvore extends Planta {
 
     }
 
-    public boolean isFrutifera() {
-        return frutifera;
-    }
-
     public void setFrutifera(boolean frutifera) {
         this.frutifera = frutifera;
     }
 
+	public boolean isFrutifera() {
+        return frutifera;
+    }
 }
